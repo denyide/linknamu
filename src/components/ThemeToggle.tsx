@@ -15,15 +15,15 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="다크모드 전환"
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card shadow-sm transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-transparent text-muted transition duration-200 hover:border-border hover:bg-card hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
     >
       {/* 밝은 화면에서는 달, 어두운 화면에서는 해 아이콘을 보여준다. */}
       <svg
         viewBox="0 0 24 24"
-        className="h-5 w-5 dark:hidden"
+        className="h-[18px] w-[18px] dark:hidden"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.75"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
@@ -32,10 +32,10 @@ export default function ThemeToggle() {
       </svg>
       <svg
         viewBox="0 0 24 24"
-        className="hidden h-5 w-5 dark:block"
+        className="hidden h-[18px] w-[18px] dark:block"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.75"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"

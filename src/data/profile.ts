@@ -6,9 +6,10 @@ export type LinkItem = {
 };
 
 export const profile = {
-  name: "김클로",
-  bio: "세계 최강 바이브코더",
-  image: "/profile.svg",
+  name: "김개발",
+  bio: "풀스택 개발자",
+  // 표시 크기(112px)에 맞춘 2배율 PNG. 확장자를 빼면 SVG가 내려와 next/image가 거부한다.
+  image: "https://placehold.co/112x112@2x/orange/white.png",
 };
 
 export const links: LinkItem[] = [

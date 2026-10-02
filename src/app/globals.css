@@ -3,25 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #f6f7f4;
-  --foreground: #171717;
-  --muted: #6b7280;
+  --background: #fafaf9;
+  --foreground: #18181b;
+  --muted: #71717a;
   --card: #ffffff;
-  --border: #e5e7eb;
+  --border: #e7e5e4;
+  --border-strong: #c4c4c8;
+  --glow: rgba(251, 146, 60, 0.14);
+  --shadow: 0 1px 2px rgba(24, 24, 27, 0.04);
+  --shadow-hover: 0 10px 28px -14px rgba(24, 24, 27, 0.22);
 }
 
 .dark {
-  --background: #0d0f0e;
-  --foreground: #ededed;
-  --muted: #9ca3af;
-  --card: #181b1a;
-  --border: #2a2e2c;
+  --background: #0a0a0b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --card: #131315;
+  --border: #232326;
+  --border-strong: #46464d;
+  --glow: rgba(251, 146, 60, 0.1);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 28px -14px rgba(0, 0, 0, 0.9);
   color-scheme: dark;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* 화면 위쪽에만 은은하게 번지는 빛을 깔아 단색 배경의 밋밋함을 던다. */
+  background: radial-gradient(40rem 22rem at 50% -6rem, var(--glow), transparent 70%)
+    no-repeat var(--background);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
 }

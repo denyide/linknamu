@@ -14,6 +14,11 @@ const config: Config = {
         muted: "var(--muted)",
         card: "var(--card)",
         border: "var(--border)",
+        "border-strong": "var(--border-strong)",
+      },
+      boxShadow: {
+        card: "var(--shadow)",
+        "card-hover": "var(--shadow-hover)",
       },
     },
   },

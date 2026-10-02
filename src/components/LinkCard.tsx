@@ -32,11 +32,23 @@ export default function LinkCard({ link, initialCount }: LinkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={recordClick}
-      className="flex min-h-14 items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground active:translate-y-0"
+      className="group flex min-h-[60px] items-center justify-between gap-3 rounded-2xl border border-border bg-card py-4 pl-5 pr-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground active:translate-y-0 active:scale-[0.99] motion-reduce:transform-none"
     >
-      <span className="font-medium">{link.title}</span>
-      <span className="shrink-0 text-xs tabular-nums text-muted">
+      <span className="truncate font-medium tracking-tight">{link.title}</span>
+      <span className="flex shrink-0 items-center gap-2.5 text-xs tabular-nums text-muted">
         클릭 {count.toLocaleString("ko-KR")}
+        <svg
+          viewBox="0 0 24 24"
+          className="h-4 w-4 transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground motion-reduce:transform-none"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M7 17 17 7M8 7h9v9" />
+        </svg>
       </span>
     </a>
   );

@@ -11,12 +11,12 @@ export default async function Home() {
   const counts = await getClickCounts();
 
   return (
-    <main className="relative mx-auto flex min-h-screen w-full max-w-md flex-col px-8 pb-16 pt-14">
-      <div className="absolute right-5 top-5">
+    <main className="relative mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pb-16 pt-20 sm:pt-28">
+      <div className="absolute right-4 top-4">
         <ThemeToggle />
       </div>
       <Profile {...profile} />
-      <div className="mt-10">
+      <div className="mt-9">
         <LinkList links={links} counts={counts} />
       </div>
     </main>
